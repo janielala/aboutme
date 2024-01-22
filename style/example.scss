@@ -1,0 +1,49 @@
+$main-bg: black;
+
+body {
+    background-color: $main-bg;
+}
+
+@mixin card() {
+    background-color: lightblue;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+@mixin media($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @include media(600px) {
+        @content
+    }
+}
+
+.my-card {
+    color: red;
+    @include card();
+
+    @include mobile() {
+        border: 1px solid black;
+    }
+}
+
+@for $i from 1 through 100 {
+    .p-#{$i} {
+        padding: #{$i}px;
+    }
+}
+
+/*
+    .p-1 {padding: 1px;}
+    .p-2 {padding: 2px;}
+    .p-3 {padding: 3px;}
+
+
+    <div class="p-15">
+
+    </div>
+*/

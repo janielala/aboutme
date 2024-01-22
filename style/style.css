@@ -1,0 +1,125 @@
+@import './header.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* general variables */
+    --main-font: "Poppins", Arial, Helvetica, sans-serif;
+    /* header variables */
+    --hero-orange: #ffa500;
+    --hero-text-color: black;
+    --hero-button-color: rgba(0,0,0,0.7);
+    --hero-button-text-color: white;
+    /* about me */
+    --about-me-bg: pink;
+
+    --card-bg: rgb(231, 231, 232);
+    --card-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+html {
+    font-size: 120%;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#about-me {
+    background-color: var(--about-me-bg);
+    padding: 2rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.card img {
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.title {
+    padding: 2%;
+}
+
+input, textarea {
+    background-color: lightgray;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 0;
+}
+
+button {
+    padding: .5rem 1.5rem;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+button:hover {
+
+}
+
+form .field {
+    margin-bottom: .5rem;
+}
+
+footer form {
+    padding: 1rem;
+    width: 600px;
+    border-radius: 1rem;
+    background-color: lightblue;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer form input, footer form textarea {
+    width: 100%;   
+    resize: none;
+}
+
+/*
+    99% of grids that i make only use the following properties
+        display:
+        gap:
+        grid-template-columns:
+
+    99% of the flexboxes that i make
+        display:
+        flex-direction:
+        flex-wrap:
+        justify-content:
+        align-items:
+*/
